@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+
+{% block style %}
+    <style>
+        .content{
+            margin-left: 30%;
+            width: 40%;
+
+        }
+        #button1{
+            width: 10%;
+            margin-left: 0;
+            float: left;
+        }
+        #button2{
+            width: 10%;
+            margin-left: 90%;
+            margin-top: 25px;
+        }
+        #pass{
+            margin-left: 67%;
+        }
+        #register{
+            font-size: 20px;
+        }
+        #login{
+            font-size: 20px;
+            margin-left: 87%;
+        }
+        span{
+            color: red;
+            font-size: 18px;
+        }
+    </style>
+{% endblock %}
+
+
+{% block content %}
+    <div class="content">
+        <a href="/register/" id="register">注册</a>
+        <a href="/login/" id="login">登录</a>
+        <form action="" method="post">
+            {% csrf_token %}
+            <label for=""><span>*</span>邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱：<input type="email" name="email" placeholder="请输入你的邮箱"></label>
+            <label for=""><span>*</span>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：<input type="password" name="password" placeholder="请输入你的密码"></label>
+            <label for=""><span>*</span>确认密码：<input type="password" name="password2" placeholder="请再次确认密码"></label>
+            <label for="">用户昵称：<input type="text" name="username" placeholder="请输入显示昵称"></label>
+            <hr>
+            <input type="reset" value="重置" id="button1">
+            <input type="submit" value="提交" id="button2">
+            <a href="/index/" style="color:whitesmoke">已有账户？请登录</a>
+            <a href="" style="color:whitesmoke" id="pass">忘记密码？请找回</a>
+
+
+        </form>
+    </div>
+{% endblock %}
+
+
+{% block script %}
+
+{% endblock %}

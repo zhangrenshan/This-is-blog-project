@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+
+{% block style %}
+
+{% endblock %}
+
+
+{% block content %}
+    <div id="page-content" class="sub-page">
+		
+		<!-- //////////// -->
+		<article class="box-content container">
+			<div class="svg-container single-post-svg svg-block">
+				<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1890 150">
+					<g transform="translate(0,-902.36218)"></g>
+					  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>
+					  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>
+					  <path d="m 1925,0 0,150 -1925,0"></path>
+				</svg>
+			</div>
+			<div class="post" style="">
+				<h1 class="entry-title">{{ article.article_name }}</h1>
+					<div class="single-thumb">
+						<img src="/static/{{ article.article_picture }}" alt="About">
+					</div>
+                    <p>{{ article.content }}</p>
+			</div>
+			<div class="svg-container single-post-svg single-svg-bottom svg-block">
+				<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1920 150">
+				  <g transform="translate(0,-902.36218)"></g>
+				  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>
+				  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>
+				  <path d="M 0,150 0,0 1925,0"></path>
+				</svg>
+			</div>
+		</article>
+		
+		<div class="comment-respond container">
+			<h3 id="reply-title" class="comment-reply-title">留言区</h3>
+			<p class="comment-notes"><span id="email-notes">你的电子邮件不会被公开.</span> 带*号是必填选项 <span class="required">*</span></p>
+			<div id="comment_form">
+				<form name="form1" id="comment" method="post" action="">
+					<label>
+					<span>留言:</span>
+					<textarea name="message" id="message"></textarea>
+					</label>
+					<label>
+					<span>留下你的名字:</span>
+					<input type="text"  name="name" id="name" required>
+					</label>
+					<label>
+					<span>留下你的邮箱:</span>
+					<input type="email"  name="email" id="email" required>
+					</label>
+					<label>
+					<span>留下你的链接:</span>
+					<input type="text"  name="website" id="website">
+					</label>
+					<center><input class="sendButton" type="submit" name="Submit" value="提交"></center>
+				</form>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+
+
+{% block script %}
+
+{% endblock %}

@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+
+
+{% block style %}
+    <style>
+        #a1{
+            font-size: 24px;
+            margin-left: 20%;
+        }
+    </style>
+{% endblock %}
+
+
+{% block content %}
+    <!-- /////////////////////////////////////////Content -->
+	<div id="page-content" class="index-page">
+
+		<!-- ////////////Content Box 01 -->
+		<section class="box-content box-5 box-style-3" id="nav-blog">
+            {% for type in result %}
+                <div class="container">
+                    <div class="row">
+                        {% for foo in type.article_list %}
+                            <div class="col-md-4">
+                            <div class="box-item">
+                                <div class="svg-container post-svg svg-block">
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1950 150">
+                                      <g transform="translate(0,-902.36218)"></g>
+                                      <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>
+                                      <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>
+                                      <path d="M 0,150 0,0 1925,0"></path>
+                                    </svg>
+                                </div>
+                                <div class="entry-thumb">
+                                    <img class="img-responsive" src="/static/{{ foo.article_picture }}">
+                                    <a class="thumb-link" href="single.html"><i class="fa fa-link"></i></a>
+                                </div>
+                                <div class="content">
+                                    <h3 class="entry-title">
+                                        <a href="single.html">{{ foo.article_name }}</a>
+                                    </h3>
+                                    <p>Suspendisse porttitor sapien ac lectus euismod imperdiet. Curabitur nec nibh at massa pellentesque accumsan eu id nibh. Donec accumsan ut mi et tincidunt. Aliquam eget metus nec leo tempor bibendum. Phasellus tincidunt lobortis metus. Duis euismod lorem turpis at diam.</p>
+                                    <span>MAY 21, 2016 BY KOMPLEET</span><br>
+                                </div>
+                                <div class="read-more">
+                                    <a href="/details/{{ foo.id }}">查看详情 …</a>
+                                </div>
+                                <div class="svg-container post-bottom-svg svg-block">
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1890 150">
+                                        <g transform="translate(0,-902.36218)"></g>
+                                          <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>
+                                          <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>
+                                          <path d="m 1925,0 0,150 -1925,0"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <div class="tlinks">Collect from
+                        <a href="http://www.cssmoban.com/"  title="网站模板">网站模板</a>
+                    </div>
+			    </div>
+            {% endfor %}
+
+
+		</section>
+
+	</div>
+
+	<div class="svg-container footer-svg svg-block">
+
+		<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1890 150">
+			<g transform="translate(0,-902.36218)"></g>
+			  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>
+			  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>
+			  <path d="m 1925,0 0,150 -1925,0"></path>
+		</svg>
+		</div>
+	<!-- /////////////////////////////////////////Footer -->
+{% endblock %}
+
+
+{% block script %}
+
+{% endblock %}
